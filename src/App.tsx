@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-<<<<<<< Updated upstream
+Updated upstream
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-=======
 import { HashRouter, Route, Routes } from "react-router-dom";
->>>>>>> Stashed changes
+Stashed changes
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "@/components/layout/Layout";
-<<<<<<< Updated upstream
+Updated upstream
 import DomainGuard from "@/components/lms/DomainGuard";
 import RequireRole from "@/components/lms/RequireRole";
 import Index from "./pages/Index";
@@ -37,7 +36,6 @@ import StudentProfile from "./pages/student/StudentProfile";
 import TrainerDashboard from "./pages/trainer/TrainerDashboard";
 import ExternalRedirect from "@/components/ExternalRedirect";
 import { LMS_URL } from "@/data/site";
-=======
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -56,14 +54,14 @@ import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";
 import TrainerDashboard from "./pages/TrainerDashboard";
 import LMSAdmin from "./pages/LMSAdmin";
->>>>>>> Stashed changes
+Stashed changes
 
 const queryClient = new QueryClient();
 
 function AuthHandler() {
   useEffect(() => {
     const hash = window.location.hash;
-<<<<<<< Updated upstream
+Updated upstream
     // Password recovery links must land on the reset page, never straight into a dashboard.
     if (hash.includes("type=recovery")) {
       window.location.replace(`/reset-password${hash}`);
@@ -72,7 +70,6 @@ function AuthHandler() {
     if (hash.includes("access_token")) {
       supabase.auth.getSession().then(() => {
         window.location.replace("/lms");
-=======
 
     // Supabase password reset / magic link callback
     if (hash.includes("access_token")) {
@@ -84,7 +81,7 @@ function AuthHandler() {
 
         // Redirect to LMS page after auth
         window.location.replace("/#/lms");
->>>>>>> Stashed changes
+Stashed changes
       });
     }
   }, []);
@@ -92,7 +89,7 @@ function AuthHandler() {
   return null;
 }
 
-<<<<<<< Updated upstream
+Updated upstream
 /** All LMS surfaces are locked to the official LMS hostname. */
 function LmsArea() {
   return (
@@ -190,7 +187,7 @@ const App = () => (
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
-=======
+);
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -224,7 +221,7 @@ const App = () => (
       </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
->>>>>>> Stashed changes
+Stashed changes
 );
 
 export default App;
