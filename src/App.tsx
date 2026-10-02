@@ -118,7 +118,6 @@ const App = () => (
               <Route path="/internship" element={<ExternalRedirect to={LMS_URL} />} />
               <Route path="/placement" element={<ExternalRedirect to={LMS_URL} />} />
               <Route path="/reset-password" element={<ResetPassword />} />
-
               {/* LMS */}
               <Route element={<LmsArea />}>
                 <Route path="/academy" element={<LmsCatalog />} />
@@ -128,7 +127,6 @@ const App = () => (
                 <Route path="/lms/courses" element={<LmsCatalog />} />
                 <Route path="/lms/course/:slug" element={<LmsCourse />} />
                 <Route path="/course/:slug" element={<LmsCourse />} />
-
                 {/* student */}
                 <Route
                   path="/student/dashboard"
@@ -140,7 +138,6 @@ const App = () => (
                 />
                 <Route path="/student" element={<Navigate to="/student/dashboard" replace />} />
                 <Route path="/dashboard" element={<Navigate to="/lms" replace />} />
-
                 {/* trainer */}
                 <Route
                   path="/trainer/dashboard"
@@ -148,7 +145,6 @@ const App = () => (
                 />
                 <Route path="/trainer" element={<Navigate to="/trainer/dashboard" replace />} />
                 <Route path="/trainer-dashboard" element={<Navigate to="/trainer/dashboard" replace />} />
-
                 {/* course management: admins and trainers (row security limits trainers to their own courses) */}
                 <Route
                   path="/lms/manage"
@@ -162,7 +158,6 @@ const App = () => (
                   path="/lms/activity"
                   element={<RequireRole allow={["admin"]}><LmsActivity /></RequireRole>}
                 />
-
                 {/* admin */}
                 <Route
                   path="/admin/dashboard"
