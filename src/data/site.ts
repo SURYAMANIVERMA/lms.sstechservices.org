@@ -9,8 +9,8 @@ export const SITE = {
 >>>>>>> Stashed changes
   short: "SS TECH",
   phone: "+91 8808227885",
-  phoneRaw: "+918808227885",
-  whatsapp: "918808227885",
+  phoneRaw: "+91 8808227885",
+  whatsapp: "+91 8808227885",
   emails: ["surya@sstechservices.org", "info@sstechservices.org"],
   address:
     "Knovatik Co-Working Space, Levana Cyber Heights, Vijaipur Colony, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010, India",

@@ -55,9 +55,7 @@ import Dashboard from "./pages/Dashboard";
 import TrainerDashboard from "./pages/TrainerDashboard";
 import LMSAdmin from "./pages/LMSAdmin";
 Stashed changes
-
 const queryClient = new QueryClient();
-
 function AuthHandler() {
   useEffect(() => {
     const hash = window.location.hash;
@@ -218,5 +216,4 @@ const App = () => (
   </QueryClientProvider>
 Stashed changes
 );
-
 export default App;
